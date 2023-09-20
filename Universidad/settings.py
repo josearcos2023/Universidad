@@ -76,9 +76,15 @@ WSGI_APPLICATION = 'Universidad.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': BASE_DIR / 'Universidad.sqlite3',
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'Universidad.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'universidad',
+        'USER': 'root',
+        'PASSWORD': 'david2023',
+        'PORT': '3306'        
     }
 }
 

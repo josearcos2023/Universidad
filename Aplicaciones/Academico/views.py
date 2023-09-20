@@ -27,7 +27,6 @@ def eliminarCurso(request, codigo):
     return redirect('/')
 
 def edicionCurso(request, codigo):
-
     curso=Curso.objects.get(codigo=codigo)
     return render(request, "edicionCurso.html", {"curso":curso})
 
@@ -42,5 +41,4 @@ def editarCurso(request):
     curso.save()
     messages.success(request, 'Curso Actualizado!!')
 
-    
     return redirect('/')
