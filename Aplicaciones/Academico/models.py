@@ -10,3 +10,7 @@ class Curso(models.Model):
         texto="{0} ({1})"
         return texto.format(self.nombre,self.creditos)
     
+class Estudiante(models.Model):
+    codigo=models.CharField(primary_key=True, max_length=6)
+    nombre=models.CharField(max_length=50)
+    curso=models.ForeignKey(Curso, on_delete=models.CASCADE)
